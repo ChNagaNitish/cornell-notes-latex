@@ -1,0 +1,199 @@
+\documentclass[tiles]{cornellnotes}
+
+\title{Data Science}
+\author{Naga Nitish}
+\date{May 2020}
+
+\begin{document}
+        \maketitle
+        \section{Probability}
+        \begin{cuenotes}
+                \cue{first cue?}
+                \note{
+                        \subsection*{Introduction}
+                        \begin{itemize}
+                                \item Probability is the liklihood of event occuring
+                                \item Trail -- Observing an event occur and note the outcome
+                                \item Experiment -- Collection of trails
+                                \item Expected value -- The outcome we expect from an experiment
+                                \item Probability frequency distribution --  collection of probabilities of each possible outcome of an event
+                                \item Permutations -- represents the number of different possible ways we can arrange a set of elements -- $n!$
+                                \item Variations -- represents the number of different possible ways we can pick and arrange a number of elements
+                                \begin{itemize}
+                                        \item With repetition -- $n^p$
+                                        \item Without repetition -- $^nP_p=\frac{n!}{(n-p)!}$
+                                \end{itemize}
+                                \item Combinations -- represents number of different possible ways we can pick elements
+                                \item Baye's theorem -- $P(A|B) = P(B|A)*P(A)/P(B)$
+                        \end{itemize}
+                }
+                \cue{second cue?}
+                \note{
+                        \subsection*{Distributions}
+                        There are two types of distributions: They are Discrete and Continuous
+                }
+                \note{
+                        \subsubsection*{Discrete}
+                        \begin{enumerate}
+                                \item Uniform
+                                \item Bernoulli
+                                \begin{itemize}
+                                        \item one trail -- two possibilities
+                                        \item $E(Y)=p$
+                                        \item $Var(Y)=p(1-p)$
+                                \end{itemize}
+                                \item Binomial
+                                \begin{itemize}
+                                        \item measures the frequencies of occurrence of one of the possible outcomes over n trails
+                                        \item $P(Y=y) = C(y,n)\times p^y\times (1-p)^{n-y}$
+                                        \item $E(Y) = n\times p$
+                                        \item $Var(Y) = n\times p\times (1-p)$
+                                \end{itemize}
+                                \item Poisson
+                                \begin{itemize}
+                                        \item measures the frequency over an interval of time or distance
+                                        \item only non-negative values
+                                        \item $P(Y=y) = \frac{\lambda^y}{y!e^{-\lambda}}$
+                                        \item $E(Y) = Var(Y) = \lambda$
+                                \end{itemize}
+                        \end{enumerate}
+                }
+                \cue{third cue?}
+                \note{
+                        \subsubsection*{Continuous}
+                        \begin{enumerate}
+                                \item Normal
+                                \begin{itemize}
+                                        \item bell shaped, symmetric, thin tails
+                                        \item $E(Y) = \mu$
+                                        \item $Var(Y) = \sigma^2$
+                                \end{itemize}
+                                \item Students' T
+                                \begin{itemize}
+                                        \item a small sample size approximation of normal distribution
+                                        \item bell shaped, symmetric, flat tails
+                                        \item accounts for extreme values better than normal distribution
+                                        \item $Var(Y) = s^2 \times \frac{k}{k-2}$
+                                \end{itemize}
+                                \item Chi squared
+                                \begin{itemize}
+                                        \item asymmetric, skewed to right
+                                        \item it is square of T distribution
+                                        \item $E(Y) = k$
+                                        \item $Var(Y) = 2k$
+                                \end{itemize}
+                                \item Exponential
+                                \begin{itemize}
+                                        \item Both PDF and CDF plateau after certain point
+                                        \item $E(Y) = \frac{1}{\lambda}$
+                                        \item $Var(Y) = \frac{1}{\lambda^2}$
+                                \end{itemize}
+                                \item Logistic
+                                \begin{itemize}
+                                        \item The smaller the scale parameter, the quicker it reaches 1.0
+                                        \item $E(Y) = \mu$
+                                        \item $Var(Y) = \frac{s^2 \times \pi^2}{3}$
+                                \end{itemize}
+                        \end{enumerate}
+                }
+        \end{cuenotes}
+        \summary{
+                \begin{enumerate}
+                        \item something random
+                        \item something random
+                        \item something random
+                \end{enumerate}
+        }
+        \section{Statistics}
+        \begin{cuenotes}
+                \cue
+                \note{
+                        \subsection*{Types of Data}
+                        \subsubsection*{Qualitative data or categorical data}
+                        \begin{itemize}
+                                \item Nominal - values not order
+                                \item Ordinal - there is order or ranking
+                        \end{itemize}
+                        \subsubsection*{Quantitative data}
+                        \begin{itemize}
+                                \item Discrete
+                                \item Continuous
+                        \end{itemize}
+                }
+                \cue
+                \note{
+                        \subsection*{Types of statistics}
+                }
+                \note{
+                        \subsubsection*{Descriptive}
+                        \begin{itemize}
+                                \item To describe data
+                                \item Measure of central tendencies
+                                \begin{itemize}
+                                        \item \textbf{Mean or average} -- sum of all values divided by number of values
+                                        \item \textbf{Median} -- middle term in the sorted list
+                                        \item \textbf{Mode} -- value with highest frequency
+                                        \item \textbf{Mid-range} -- average of largest and smallest value
+                                \end{itemize}
+                                \item Measure of dispersion
+                                \begin{itemize}
+                                        \item \textbf{Range} -- largest minus smallest value
+                                        \item \textbf{Standard deviation} -- square root of variance
+                                        \item \textbf{Variance} -- average of squared differences of the mean
+                                \end{itemize}
+                                \item Frequency distributions
+                                \item Histograms
+                                \begin{itemize}
+                                        \item It's a bar graph with equal width
+                                        \item Properties -- symmetric, skewed and uniform or rectangular
+                                \end{itemize}
+                        \end{itemize}
+                }
+                \note{
+                        \subsubsection*{Inferential}
+                        \begin{itemize}
+                                \item To make inferences from data
+                                \item Hypothesis testing
+                                \item ANOVA
+                                \item Chi-squared tests
+                                \item Regression
+                        \end{itemize}
+                }
+                \cue
+                \note{
+                        \subsubsection*{Some important points}
+                        \begin{itemize}
+                                \item \textbf{Skewness} -- Left (negative) skewness means that the outliers are to the left
+                                \item \textbf{Covariance} -- It is joint variability of two variables
+                                $$\sigma_{xy} = \frac{\Sigma_{i=1}^N (x_i - \mu_x) \times (y_i - \mu_y)}{n-1}$$
+                                \item \textbf{Correlation}
+                                $$\rho = \frac{\sigma_{xy}}{\sigma_x \sigma_y}$$
+                        \end{itemize}
+                }
+                \note{
+                        \subsection*{Central Limit Theorem}
+                        The Central Limit Theorem (CLT) is one of the greatest statistical insights. It states that no matter the underlying distribution of the dataset, the sampling distribution of the means would approximate a normal distribution. Moreover, the mean of the sampling distribution would be equal to the mean of the original distribution and the variance would be n times smaller, where n is the size of the samples. The CLT applies whenever we have a sum or an average of many variables (e.g. the sum of rolled numbers when rolling dice)
+                        \begin{itemize}
+                                \item \textbf{Estimator} is a mathematical function that approximates a population parameter depending only on sample information
+                                \item \textbf{Estimate} is the output that we get from estimator. Point estimate and confidence interval estimate
+                        \end{itemize}
+                }
+                \note{
+                        \subsubsection*{Confidance interval estimate}
+                        With population variance
+                        $$\bar{x} \pm z_{\alpha/2} \times \frac{\sigma}{\sqrt{n}}$$
+                        Without population variance
+                        $$\bar{x} \pm t_{n-1,\alpha/2} \times \frac{s}{\sqrt{n}}$$
+                        where standard error is $s/\sqrt{n}$
+                }
+        \end{cuenotes}
+        \summary{
+                \begin{enumerate}
+                        \item something random
+                        \item something random
+                        \item something random
+                        \item something random
+                        \item something random
+                \end{enumerate}
+        }
+\end{document}
